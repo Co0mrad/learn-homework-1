@@ -15,13 +15,21 @@
     
 """
 
-questions_and_answers = {}
+questions_and_answers = {
+  "Привет": "Доброго времени суток",
+  "Как твои дела?": "Бывало и лучше.",
+  "Чем занимаешься?": "Программирую",
+  "О, так ты программист?": "Ну да,типо того.",
+  "Переустановишь мне винду?":"*faceplam*", 
+}
 
 def ask_user(answers_dict):
-    """
-    Замените pass на ваш код
-    """
-    pass
+    user_question = input("Как же давно тебя не было в уличных гонках...тапай давай.")
+    while user_question not in answers_dict:
+      user_question = input("...чего молчишь то?может быть 'привет'?)")
+    print(answers_dict[user_question])  
+
+
     
 if __name__ == "__main__":
     ask_user(questions_and_answers)

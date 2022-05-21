@@ -14,13 +14,19 @@
   и выводя на экран результаты
 
 """
+first_string = input("Введите первую строку   ")
+second_string = input("Введите вторую строку   ")
+def string_happens(first_string,second_string):
+  if isinstance(first_string,str) and isinstance(second_string,str):
+    if (first_string) == (second_string):
+      return 1
+    elif len(first_string) > len(second_string):
+      return 2
+    elif (first_string != second_string) and (second_string == "learn"):
+      return 3
+  else:
+    return 0        
 
-def main():
-    """
-    Эта функция вызывается автоматически при запуске скрипта в консоли
-    В ней надо заменить pass на ваш код
-    """
-    pass
     
 if __name__ == "__main__":
-    main()
+  string_happens(first_string,second_string)
